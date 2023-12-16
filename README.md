@@ -4,28 +4,10 @@ This is a simple Employee Data Management System implemented in C. The system al
 
 ## Table of Contents
 
-- [Features](#features)
 - [How to Use](#how-to-use)
 - [Options](#options)
 - [File Structure](#file-structure)
-- [Compilation](#compilation)
 - [Contributing](#contributing)
-- [License](#license)
-
-## Features
-
-- Create a new record or add a new record to the existing data.
-- Delete a record based on the Employee ID.
-- Search for a record based on the Employee ID.
-- Modify a record based on the Employee ID.
-- List records based on various criteria:
-  - List all professors.
-  - List employees older than 55.
-  - List all male employees.
-  - List all female employees.
-  - List all employees of a specific department.
-  - List employees with a specific designation.
-  - List all records.
 
 ## How to Use
 
@@ -71,15 +53,7 @@ This is a simple Employee Data Management System implemented in C. The system al
 ## File Structure
 
 - **EmpData.txt**: Data file storing employee records.
-- **employee_management_system.c**: C source code file.
-
-## Compilation
-
-To compile the code, use the following command:
-
-```bash
-gcc employee_management_system.c -o employee_management_system
-```
+- **project.c**: C source code file.
 
 ## Contributing
 
