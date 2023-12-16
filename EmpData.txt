@@ -1,6 +1,6 @@
-12    	Name1 Name2   	34 	M     	Mgmt      	HOD		     		
-14    	Name1 Name2   	36 	M     	CSE       	Professor      				
-15    	Name1 Name2   	55 	M     	IT        	Professor      				
-16    	Name1 Name2   	38 	M     	CSE       	AsstProf 	
-18    	Name1 Name2   	39 	M     	Admin     	Manager      				
-23    	name1 name2   	34 	M     	dept      	desg      	
+1    	Name1 Name2   	34 	M     	Mgmt      	HOD		     		
+2    	Name1 Name2   	36 	M     	CSE       	Professor      				
+3    	Name1 Name2   	55 	M     	IT        	Professor      				
+4    	Name1 Name2   	38 	M     	CSE       	AsstProf 	
+5    	Name1 Name2   	39 	M     	Admin     	Manager      				
+6    	name1 name2   	34 	M     	dept      	desg      	
