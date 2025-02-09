@@ -1,15 +1,9 @@
 // Employee Data Management System
-/*
-    Todo Stuff
-    - ask for a filename to access or make
-    - add a while loop so that menu stays on until you exit
-    - add strtok for retrieving data
-    - document the code (by adding comments), use chatgpt or whatever
-    - see if you can apply file random access added to this project
-*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+
 typedef struct employee{
     int empid;
     int age;
@@ -37,79 +31,81 @@ int main()
 {
     FILE *fptr;
     printf("\nEmployee Management System\n\n");
-    printf("Enter an option: \n");
-    printf("1. Create A New Record\n2. Add A New record\n3. Delete A Record\n");
-    printf("4. Search For A Record\n5. Modify A Record\n6. List\n");
-    printf("\nEnter Your Choice: ");
-    scanf("%d",&opt);
-    printf("\n");
-    if(opt == 6)
-    {
-        printf("06. List All Professors \n07. List All Employees Older Than 55\n08. List All Male employees\n09. List All Female Employees\n10. List All Employees Of A Department\n11. List A Designation\n12. List All Records\n");
+    while(1) {
+        printf("Enter an option: \n");
+        printf("1. Create A New Record\n2. Add A New record\n3. Delete A Record\n");
+        printf("4. Search For A Record\n5. Modify A Record\n6. List\n");
         printf("\nEnter Your Choice: ");
         scanf("%d",&opt);
         printf("\n");
-    }
-    else if(opt == 1)
-    {
-        printf("Enter The Number Of Records: ");
-        scanf("%d",&n);
-        printf("\n");
-    }
-    empdata arr[n];
-    switch(opt)
-    {    
-        case 1: // Create a New Record
-            fptr = fopen("EmpData.txt","w");
-            write(fptr,arr,n);
-            fclose(fptr);
-            break;
-        case 2: // Add a New Record
-            fptr = fopen("EmpData.txt","a");
-            write(fptr,arr,n);
-            break;
-        case 3: // Delete a Record
-            fptr = fopen("EmpData.txt","r");
-            delete(fptr);
-            break;
-        case 4: // Search for a Record
-            fptr = fopen("EmpData.txt","r");
-            search(fptr);
-            break;
-        case 5: // Modify a Record
-            fptr = fopen("EmpData.txt","r");
-            modify(fptr);
-            break;
-        case 6: // List all Professors
-            fptr = fopen("EmpData.txt","r");
-            listprof(fptr);
-            break;
-        case 7: // List older than 55
-            fptr = fopen("EmpData.txt","r");
-            list55(fptr);
-            break;
-        case 8: // List all Male
-            fptr = fopen("EmpData.txt","r");
-            listmale(fptr);
-            break;    
-        case 9: // List all female
-            fptr = fopen("EmpData.txt","r");
-            listfemale(fptr);
-            break;    
-        case 10: // List a Department
-            fptr = fopen("EmpData.txt","r");
-            listdept(fptr);
-            break;
-        case 11: // List a Desigation
-            fptr = fopen("EmpData.txt","r");
-            listdesg(fptr);
-            break;
-        case 12: // List all
-            fptr = fopen("EmpData.txt","r");
-            display(fptr);
-            break;      
-        default:
-            printf("Choose the correct option.\n");
+        if(opt == 6)
+        {
+            printf("06. List All Professors \n07. List All Employees Older Than 55\n08. List All Male employees\n09. List All Female Employees\n10. List All Employees Of A Department\n11. List A Designation\n12. List All Records\n");
+            printf("\nEnter Your Choice: ");
+            scanf("%d",&opt);
+            printf("\n");
+        }
+        else if(opt == 1)
+        {
+            printf("Enter The Number Of Records: ");
+            scanf("%d",&n);
+            printf("\n");
+        }
+        empdata arr[n];
+        switch(opt)
+        {    
+            case 1: // Create a New Record
+                fptr = fopen("EmpData.txt","w");
+                write(fptr,arr,n);
+                fclose(fptr);
+                break;
+            case 2: // Add a New Record
+                fptr = fopen("EmpData.txt","a");
+                write(fptr,arr,n);
+                break;
+            case 3: // Delete a Record
+                fptr = fopen("EmpData.txt","r");
+                delete(fptr);
+                break;
+            case 4: // Search for a Record
+                fptr = fopen("EmpData.txt","r");
+                search(fptr);
+                break;
+            case 5: // Modify a Record
+                fptr = fopen("EmpData.txt","r");
+                modify(fptr);
+                break;
+            case 6: // List all Professors
+                fptr = fopen("EmpData.txt","r");
+                listprof(fptr);
+                break;
+            case 7: // List older than 55
+                fptr = fopen("EmpData.txt","r");
+                list55(fptr);
+                break;
+            case 8: // List all Male
+                fptr = fopen("EmpData.txt","r");
+                listmale(fptr);
+                break;    
+            case 9: // List all female
+                fptr = fopen("EmpData.txt","r");
+                listfemale(fptr);
+                break;    
+            case 10: // List a Department
+                fptr = fopen("EmpData.txt","r");
+                listdept(fptr);
+                break;
+            case 11: // List a Desigation
+                fptr = fopen("EmpData.txt","r");
+                listdesg(fptr);
+                break;
+            case 12: // List all
+                fptr = fopen("EmpData.txt","r");
+                display(fptr);
+                break;      
+            default:
+                printf("Choose the correct option.\n");
+        }
     }
     return 0;
 }

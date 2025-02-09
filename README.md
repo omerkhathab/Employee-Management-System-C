@@ -54,7 +54,3 @@ This is a simple Employee Data Management System implemented in C. The system al
 
 - **EmpData.txt**: Data file storing employee records.
 - **project.c**: C source code file.
-
-## Contributing
-
-Feel free to contribute to this project by opening issues or submitting pull requests.
